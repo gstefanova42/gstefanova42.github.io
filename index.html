@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galq | Portfolio</title>
+  <title>Galya | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-  <main class="section">
-    <div class="container">
-      <p class="section-subtitle">Design system test</p>
-      <h1>Привет, аз съм <span class="text-gradient">Галя</span></h1>
-      <p> Това е тест на дизайн системата от Спринт 2</p>
-  
-      <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a class="btn btn-primary" href="#">Primary Button</a>
-        <a class="btn btn-outline" href="#">Outline Button</a>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="navbar-logo">Галя</a>
+
+      <nav aria-label="Main navigation">
+        <ul class="navbar-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
       </div>
-  
-      <div class="card" style="margin-top: 2rem; max-width: 400px;">
-        <h3> Примерна карта</h3>
-        <p>Така ще изглеждат project/skill cards по-късно.</p>
+      </header>
+      <section id="hero" class="hero section">
+        <div class="container hero-content">
+          <p class="hero-eyebrow">Portfolio</p>
+      <h1>Привет, аз съм <span class="text-gradient">Галя</span></h1>
+      <p class="hero-tagline">Студентка, II курс - Уеб дизайн и графична реклама</p>
+      <p class="hero-description">Втора година студентка по уеб дизайн с фокус върху създаването на модерни,
+        функционални и
+        интуитивни дигитални преживявания. Разгледай моите проекти и развитието ми като бъдещ UI/UX дизайнер.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="projects.html">Виж проектите</a>
+        <a class="btn btn-outline" href="#contact">Свържи се с мен</a>
       </div>
     </div>
-  </main>
-
+  </section>
   <script src="js/main.js"></script>
 </body>
+
 </html>
