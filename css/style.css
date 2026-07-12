@@ -264,3 +264,100 @@ p {
 .navbar-logo:hover {
     opacity: 0.85;
 }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: var(--space-lg);
+    align-items: start;
+}
+.about-text p + p {
+    margin-top: var(--space-sm);
+}
+
+.about-card-label {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: var(--space-sm);
+}
+
+.about-list {
+    display: grid;
+    gap: var(--space-xs);
+}
+
+.about-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--text);
+}
+
+.about-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+}
+
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+.study-card-eyebrow {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: var(--space-xs);
+}
+
+.study-card h3 {
+    margin-bottom: var(--space-xs);
+}
+
+.study-card p:last-child {
+    margin-bottom: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: var(--space-md);
+}
+
+.skill-card h3 {
+    margin-bottom: var(--space-xs);
+}
+
+.skill-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .about-grid,
+    .study-grid,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.study-card,
+.skill-card {
+    transition: transform 0.32s ease, border-color 0.2s ease;
+}
+
+.study-card:hover,
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
