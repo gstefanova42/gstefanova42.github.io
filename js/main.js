@@ -40,3 +40,38 @@ if (projectModal) {
     }
   });
 }
+
+const navbarToggle = document.querySelector('.navbar-toggle');
+const mainNav = document.getElementById('main-nav');
+if (navbarToggle && mainNav) {
+  navbarToggle.addEventListener('click', ()=> {
+    const isOpen = mainNav.classList.toggle('is-open');
+    navbarToggle.classList.toggle('is-active', isOpen);
+    navbarToggle.setAttribute('aria-expanded', String(isOpen));
+    navbarToggle.setAttribute('aria-label', isOpen ? 'Затвори меню' : 'Отвори меню');
+  });
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('is-open');
+      navbarToggle.classList.remove('is-active');
+      navbarToggle.setAttribute('aria-expanded', 'false');
+      navbarToggle.setAttribute('aria-label', 'Отвори меню');
+    });
+  });
+}
+
+const revealElements = document.querySelectorAll('.reveal');
+if (revealElements.length > 0) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  revealElements.forEach((el) => revealObserver.observe(el));
+}
