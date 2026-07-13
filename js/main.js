@@ -5,7 +5,7 @@ if (projectModal) {
     const modalTag = projectModal.querySelector('.project-modal-tag');
   const modalTitle = projectModal.querySelector('.project-modal-title');
   const modalDescription = projectModal.querySelector('.project-modal-description');
-  const projectCards = document.querySelectorAll('.projects-page .project-card[data-image]');
+  const projectCards = document.querySelectorAll('.project-card[data-image]');
   function openProjectModal(card) {
     modalImage.src = card.dataset.image;
     modalImage.alt = card.dataset.title || '';
